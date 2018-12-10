@@ -19,9 +19,12 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "angularfire2": "^5.1.1",
     "core-js": "^2.5.4",
+    "firebase": "^5.6.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
+    "typed.js": "^2.0.9",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

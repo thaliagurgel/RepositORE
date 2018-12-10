@@ -1,0 +1,50 @@
+<form class="form-inline">
+    <input class="form-control" name="searchInput" placeholder="Pesquisar Objeto" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 50%; left:100cm;">
+    <button class="btn btn-outline-primary" (click)="searchText=''">X</button>
+  </form>
+  <table class="table table-sm">
+    <thead>
+      <th>Título</th>
+      <th>Autor</th>
+      <th>Assunto</th>
+      <th>Descrição</th>
+      <th>Editor</th>
+      <th>Colaborador</th>
+      <th>Data</th>
+      <th>Tipo</th>
+      <th>Formato</th>
+      <th>Identificador</th>
+      <th>Fonte</th>
+      <th>Idioma</th>
+      <th>Relação</th>
+      <th>Abrangência</th>
+      <th>Direitos Autorais</th>
+      <th></th>
+    </thead>
+    <ng-container *ngFor="let objeto of objectArray">
+      <tr class="table-primary" *ngIf="filterCondition(objeto)">
+          <td>{{objeto.title}}</td>
+          <td>{{objeto.creator}}
+          <td>{{objeto.subject}}</td>
+          <td>{{objeto.description}}</td>
+          <td>{{objeto.publisher}}</td>
+          <td>{{objeto.contributor}}</td>
+          <td>{{objeto.date}}</td>
+          <td>{{objeto.type}}</td>
+          <td>{{objeto.format}}</td>
+          <td>{{objeto.identifier}}</td>
+          <td>{{objeto.source}}</td>
+          <td>{{objeto.language}}</td>
+          <td>{{objeto.relation}}</td>
+          <td>{{objeto.coverage}}</td>
+          <td>{{objeto.rights}}</td>
+          <td>
+            <button class="btn btn-outline-info" (click)="objectService.populateForm(objeto)">Edit</button>
+            <button class="btn btn-outline-danger" (click)="onDelete(objeto.$key)">Delete</button>
+          </td>
+      </tr>
+    </ng-container>
+  </table>
+  <div class="alert alert-danger" *ngIf="showDeletedMessage">
+    Objeto Deletado.
+  </div>
