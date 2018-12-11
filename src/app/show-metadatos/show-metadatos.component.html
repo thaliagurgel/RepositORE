@@ -1,0 +1,133 @@
+
+<table class="table table-sm">
+    <ng-container *ngFor="let objeto of objectArray">
+  <tbody>
+    <tr>
+    <th class  id="s1"> Campo Dublin Core </th>
+    <th class  id="s2"> Valor </th>
+    </tr>
+    <tr class = "ds-table-row-metadados">
+      <td class ="metadataFieldLabel">
+        <span class="bold">dc.title</span>
+      </td>
+      <td class ="metadataFieldValue">
+          {{objeto.title}}
+      </td>
+      </tr>
+      <tr class = "ds-table-row-metadados">
+          <td class ="metadataFieldLabel">
+            <span class="bold">dc.creator</span>
+          </td>
+          <td class ="metadataFieldValue">
+              {{objeto.creator}}
+          </td>
+          </tr>
+          <tr class = "ds-table-row-metadados">
+              <td class ="metadataFieldLabel">
+                <span class="bold">dc.subject</span>
+              </td>
+              <td class ="metadataFieldValue">
+                  {{objeto.subject}}
+              </td>
+              </tr>
+              <tr class = "ds-table-row-metadados">
+                  <td class ="metadataFieldLabel">
+                    <span class="bold">dc.description</span>
+                  </td>
+                  <td class ="metadataFieldValue">
+                      {{objeto.description}}
+                  </td>
+                  </tr>
+                  <tr class = "ds-table-row-metadados">
+                      <td class ="metadataFieldLabel">
+                        <span class="bold">dc.publisher</span>
+                      </td>
+                      <td class ="metadataFieldValue">
+                          {{objeto.publisher}}
+                      </td>
+                      </tr>
+                      <tr class = "ds-table-row-metadados">
+                          <td class ="metadataFieldLabel">
+                            <span class="bold">dc.contributor</span>
+                          </td>
+                          <td class ="metadataFieldValue">
+                              {{objeto.contributor}}
+                          </td>
+                          </tr>
+                          <tr class = "ds-table-row-metadados">
+                              <td class ="metadataFieldLabel">
+                                <span class="bold">dc.date</span>
+                              </td>
+                              <td class ="metadataFieldValue">
+                                  {{objeto.date}}
+                              </td>
+                              </tr>
+                              <tr class = "ds-table-row-metadados">
+                                  <td class ="metadataFieldLabel">
+                                    <span class="bold">dc.type</span>
+                                  </td>
+                                  <td class ="metadataFieldValue">
+                                      {{objeto.type}}
+                                  </td>
+                                  </tr>
+                                  <tr class = "ds-table-row-metadados">
+                                      <td class ="metadataFieldLabel">
+                                        <span class="bold">dc.format</span>
+                                      </td>
+                                      <td class ="metadataFieldValue">
+                                          {{objeto.format}}
+                                      </td>
+                                      </tr>
+                                      <tr class = "ds-table-row-metadados">
+                                          <td class ="metadataFieldLabel">
+                                            <span class="bold">dc.identifier</span>
+                                          </td>
+                                          <td class ="metadataFieldValue">
+                                              {{objeto.identifier}}
+                                          </td>
+                                          </tr>
+                                          <tr class = "ds-table-row-metadados">
+                                              <td class ="metadataFieldLabel">
+                                                <span class="bold">dc.source</span>
+                                              </td>
+                                              <td class ="metadataFieldValue">
+                                                  {{objeto.source}}
+                                              </td>
+                                              </tr>
+                                              <tr class = "ds-table-row-metadados">
+                                                  <td class ="metadataFieldLabel">
+                                                    <span class="bold">dc.language</span>
+                                                  </td>
+                                                  <td class ="metadataFieldValue">
+                                                      {{objeto.language}}
+                                                  </td>
+                                                  </tr>
+                                                  <tr class = "ds-table-row-metadados">
+                                                      <td class ="metadataFieldLabel">
+                                                        <span class="bold">dc.relation</span>
+                                                      </td>
+                                                      <td class ="metadataFieldValue">
+                                                          {{objeto.relation}}
+                                                      </td>
+                                                      </tr>
+
+                                                      <tr class = "ds-table-row-metadados">
+                                                          <td class ="metadataFieldLabel">
+                                                            <span class="bold">dc.coverage</span>
+                                                          </td>
+                                                          <td class ="metadataFieldValue">
+                                                              {{objeto.coverage}}
+                                                          </td>
+                                                          </tr>
+                                                          <tr class = "ds-table-row-metadados">
+                                                              <td class ="metadataFieldLabel">
+                                                                <span class="bold">dc.rights</span>
+                                                              </td>
+                                                              <td class ="metadataFieldValue">
+                                                                  {{objeto.rights}}
+                                                              </td>
+                                                            </tr>
+
+  </tbody>
+  </ng-container>
+</table>

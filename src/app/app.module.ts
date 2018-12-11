@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ObjetosComponent } from './objetos/objetos.component';
+import { ShowMetadatosComponent } from './show-metadatos/show-metadatos.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ObjetosComponent } from './objetos/objetos.component';
     FooterComponent,
     InicioComponent,
     SobreComponent,
-    ObjetosComponent
+    ObjetosComponent,
+    ShowMetadatosComponent
   ],
   imports: [
     BrowserModule,
