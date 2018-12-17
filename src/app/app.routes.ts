@@ -5,6 +5,7 @@ import { SearchObjetosComponent } from './search-objetos/search-objetos.componen
 import { FormularioComponent } from './formulario/formulario.component';
 import { ShowMetadatosComponent } from './show-metadatos/show-metadatos.component';
 import { ObjetosComponent } from './objetos/objetos.component';
+import { SearchAdvancedComponent } from './search-advanced/search-advanced.component';
 
 
 export const ROUTES: Routes = [
@@ -13,5 +14,6 @@ export const ROUTES: Routes = [
   {path: 'search-objetos', component: SearchObjetosComponent},
   {path: 'formulario', component: FormularioComponent},
   {path: 'show-metadatos', component: ShowMetadatosComponent},
-  {path: 'objetos', component : ObjetosComponent}
+  {path: 'objetos', component : ObjetosComponent},
+  {path: 'search-advanced', component: SearchAdvancedComponent}
 ]

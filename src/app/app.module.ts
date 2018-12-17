@@ -20,6 +20,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ObjetosComponent } from './objetos/objetos.component';
 import { ShowMetadatosComponent } from './show-metadatos/show-metadatos.component';
+import { SearchAdvancedComponent } from './search-advanced/search-advanced.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ShowMetadatosComponent } from './show-metadatos/show-metadatos.componen
     InicioComponent,
     SobreComponent,
     ObjetosComponent,
-    ShowMetadatosComponent
+    ShowMetadatosComponent,
+    SearchAdvancedComponent
   ],
   imports: [
     BrowserModule,
