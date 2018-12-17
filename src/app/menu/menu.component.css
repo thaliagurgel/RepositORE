@@ -1,6 +1,13 @@
-.navbar{
-  width: 1366px;
-  height: 56px;
-  right: 128px;
-  position: relative;
-}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-start;
+  }
+
+.flex-item {
+  flex: 0 1 auto;
+  align-self: auto;
+  }

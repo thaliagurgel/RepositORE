@@ -3,9 +3,11 @@ import { ROUTES } from './app.routes';
 import { ObjectService } from './shared/object.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +23,10 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ObjetosComponent } from './objetos/objetos.component';
 import { ShowMetadatosComponent } from './show-metadatos/show-metadatos.component';
 import { SearchAdvancedComponent } from './search-advanced/search-advanced.component';
+import { UserComponent } from './user/user.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +40,11 @@ import { SearchAdvancedComponent } from './search-advanced/search-advanced.compo
     SobreComponent,
     ObjetosComponent,
     ShowMetadatosComponent,
-    SearchAdvancedComponent
+    SearchAdvancedComponent,
+    UserComponent,
+    RegisterComponent,
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,6 +53,8 @@ import { SearchAdvancedComponent } from './search-advanced/search-advanced.compo
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AppRoutingModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [ObjectService],

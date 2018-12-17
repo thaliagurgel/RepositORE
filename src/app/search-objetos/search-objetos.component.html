@@ -1,10 +1,10 @@
 <form class="form-inline">
-    <input class="form-control" name="searchInput" placeholder="Pesquisar Objeto" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 50%; left:100cm;">
+    <input class="form-control" name="searchInput" placeholder="Pesquisar Objeto" #searchInput="ngModel" [(ngModel)]="searchText" (keyup)="searchFilterObject($event.target.value)" style="width: 50%; left:100cm;">
     <button class="btn btn-outline-primary" (click)="searchText=''">X</button>
   </form>
 
   <table class="table table-sm">
-      <ng-container *ngFor="let objeto of objectArray">
+      <ng-container *ngFor="let objeto of objectArrayFiltred">
           <tr class="table-primary" *ngIf="filterCondition(objeto)">
     <tbody>
       <tr class = "ds-table-row">
@@ -131,13 +131,14 @@
 
     </tbody>
           <td>
-            <button class="btn btn-outline-info" [routerLink]="['/formulario']" (click)="objectService.populateForm(objeto)">Edit</button>
+            <button class="btn btn-outline-info" [routerLink]="['/formulario']" (click)="formClick(objeto)">Edit</button>
             <button class="btn btn-outline-danger" (click)="onDelete(objeto.$key)">Delete</button>
-            <button type="button" class="btn btn-info" [routerLink]="['/show-metadatos']" >Metadados</button>
+            <button type="button" class="btn btn-info" [routerLink]="['/show-metadatos', objeto.$key]" >Metadados</button>
           </td>
         </tr>
     </ng-container>
   </table>
+
   <div class="alert alert-danger" *ngIf="showDeletedMessage">
     Objeto Deletado.
   </div>

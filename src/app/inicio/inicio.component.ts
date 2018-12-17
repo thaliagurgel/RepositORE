@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import * as Typed from 'typed.js';
 
 @Component({
@@ -11,7 +12,7 @@ export class InicioComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const options = {
+     const options = {
       stringsElement: '#typed-strings',
       strings: ['Repositório de Objetos de Robótica Educacional',
       'Universidade do Estado do Rio Grande do Norte - UERN'],
@@ -25,7 +26,6 @@ export class InicioComponent implements OnInit {
       loop: true
       };
       const typed = new Typed('.typing-element', options);
-
   }
 
 }
